@@ -1,0 +1,70 @@
+{
+  "skills": [
+    {
+      "skillName": "HTML/HTML 5",
+      "image": "HTML5_badge.png",
+      "alt": "HTML",
+      "animation": "out3d"
+    },
+    {
+      "skillName": "CSS/CSS 3",
+      "image": "CSS3_badge.png",
+      "alt": "CSS",
+      "animation": "out3d"
+    },
+    {
+      "skillName": "JavaScript",
+      "image": "JS_badge.png",
+      "alt": "JS",
+      "animation": "out3d"
+    },
+    {
+      "skillName": "Git",
+      "image": "git.png",
+      "alt": "Git",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "GitHub",
+      "image": "github.jpeg",
+      "alt": "GitHub",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Bootstrap 5",
+      "image": "Bootstrap 5 Logo.png",
+      "alt": "Bootstrap",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "React.js",
+      "image": "react_logo.png",
+      "alt": "React.js",
+      "animation": "spin"
+    },
+    {
+      "skillName": "Node.js",
+      "image": "nodejs_logo.png",
+      "alt": "Node.js",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Express.js",
+      "image": "express.png",
+      "alt": "Express.js",
+      "animation": "spin"
+    },
+    {
+      "skillName": "mongoDB",
+      "image": "mongo.png",
+      "alt": "mongoDB",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "WordPress",
+      "image": "wordpress.jpg",
+      "alt": "WordPress",
+      "animation": "mirror"
+    }
+  ]
+}

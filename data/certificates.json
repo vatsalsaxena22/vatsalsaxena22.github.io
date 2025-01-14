@@ -1,0 +1,44 @@
+{
+  "certificates": [
+    {
+      "certificateName": "HTML",
+      "image": "html-certificate.png",
+      "alt": "HTML"
+    },
+    {
+      "certificateName": "HTML Advanced",
+      "image": "html-ad-certificate.png",
+      "alt": "HTML Advanced"
+    },
+    {
+      "certificateName": "Building a Website",
+      "image": "build-certificate.png",
+      "alt": "Build"
+    },
+    {
+      "certificateName": "HTML & CSS",
+      "image": "html-css.png",
+      "alt": "html-css"
+    },
+    {
+      "certificateName": "JavaScript",
+      "image": "js-certificate.png",
+      "alt": "JavaScript"
+    },
+    {
+      "certificateName": "Introduction to JavaScript",
+      "image": "JS-intro-certificate.jpg",
+      "alt": "JS-intro"
+    },
+    {
+      "certificateName": "JavaScript Intermediate",
+      "image": "js-intermediate.jpg",
+      "alt": "js-intermediate"
+    },
+    {
+      "certificateName": "Node.js",
+      "image": "node-certificate.png",
+      "alt": "Node.js"
+    }
+  ]
+}
