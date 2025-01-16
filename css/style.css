@@ -218,7 +218,7 @@ main > div > h2:nth-child(4) {
   border-radius: 15px;
   border: 2px solid var(--shadow-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -242,6 +242,13 @@ main > div > h2:nth-child(4) {
 
 .skills-item img {
   width: 100px;
+}
+
+.other-skills-head{
+  padding: 20px;
+}
+.other-skills{
+  margin: 50px 0 0 150px;
 }
 
 .timeline {

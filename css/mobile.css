@@ -78,6 +78,15 @@
     width: 50px;
   }
 
+  
+  .other-skills{
+    margin: 10px;
+  }
+  .other-skills ul{
+    width: fit-content;
+    font-size: medium;
+  }
+
   .timeline{
     font-size: 15px;
   }

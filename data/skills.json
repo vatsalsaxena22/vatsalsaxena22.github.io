@@ -1,13 +1,13 @@
 {
   "skills": [
     {
-      "skillName": "HTML/HTML 5",
+      "skillName": "HTML",
       "image": "HTML5_badge.png",
       "alt": "HTML",
       "animation": "out3d"
     },
     {
-      "skillName": "CSS/CSS 3",
+      "skillName": "CSS",
       "image": "CSS3_badge.png",
       "alt": "CSS",
       "animation": "out3d"
@@ -17,6 +17,30 @@
       "image": "JS_badge.png",
       "alt": "JS",
       "animation": "out3d"
+    },
+    {
+      "skillName": "Hostinger A.I.",
+      "image": "hostinger.jpeg",
+      "alt": "Hostinger A.I.",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "WordPress",
+      "image": "wordpress.jpg",
+      "alt": "WordPress",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Blogger",
+      "image": "Blogger.png",
+      "alt": "Blogger",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Goolge Sites",
+      "image": "google-sites.png",
+      "alt": "Google Sites",
+      "animation": "mirror"
     },
     {
       "skillName": "Git",
@@ -58,12 +82,6 @@
       "skillName": "mongoDB",
       "image": "mongo.png",
       "alt": "mongoDB",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "WordPress",
-      "image": "wordpress.jpg",
-      "alt": "WordPress",
       "animation": "mirror"
     }
   ]
