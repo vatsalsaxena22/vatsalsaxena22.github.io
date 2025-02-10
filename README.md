@@ -37,12 +37,9 @@ This portfolio website serves as a comprehensive overview of my professional jou
 ## Technologies Used
 
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Frameworks and Libraries:** W3.CSS, W3.JS
 - **Icons:** Font Awesome
-- **Fonts:** Google Fonts
-- **Hosting:** Netlify
-- **Build Tools:** npm, Vite
 - **Version Control:** Git
+- **Deployment:** GitHub Pages
 
 ## Getting Started
 
