@@ -2,17 +2,6 @@
 
 Welcome to the repository for my personal portfolio website. This site showcases my projects, skills, experience, and education.
 
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## About
 
 This portfolio website serves as a comprehensive overview of my professional journey as a Full Stack Developer. It includes sections detailing my projects, work experience, education, skills, and certifications.
