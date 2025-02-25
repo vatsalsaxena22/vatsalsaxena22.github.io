@@ -242,6 +242,7 @@ main > div > h2:nth-child(4) {
 
 .skills-item img {
   width: 100px;
+  height: 100px;
 }
 
 .other-skills-head{

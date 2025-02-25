@@ -8,39 +8,15 @@
     },
     {
       "skillName": "CSS",
-      "image": "CSS3_badge.png",
+      "image": "cssNew.png",
       "alt": "CSS",
       "animation": "out3d"
     },
     {
       "skillName": "JavaScript",
-      "image": "JS_badge.png",
+      "image": "jsNew.png",
       "alt": "JS",
       "animation": "out3d"
-    },
-    {
-      "skillName": "Hostinger A.I.",
-      "image": "hostinger.jpeg",
-      "alt": "Hostinger A.I.",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "WordPress",
-      "image": "wordpress.jpg",
-      "alt": "WordPress",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "Blogger",
-      "image": "Blogger.png",
-      "alt": "Blogger",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "Goolge Sites",
-      "image": "google-sites.png",
-      "alt": "Google Sites",
-      "animation": "mirror"
     },
     {
       "skillName": "Git",
@@ -55,8 +31,56 @@
       "animation": "mirror"
     },
     {
+      "skillName": "Hostinger A.I.",
+      "image": "hostinger.jpeg",
+      "alt": "Hostinger A.I.",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Goolge Sites",
+      "image": "google-sites.png",
+      "alt": "Google Sites",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Blogger",
+      "image": "Blogger.png",
+      "alt": "Blogger",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "WordPress",
+      "image": "wordpress.jpg",
+      "alt": "WordPress",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "PHP",
+      "image": "php.png",
+      "alt": "PHP",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "MySQL",
+      "image": "mysql.png",
+      "alt": "MySQL",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Xampp",
+      "image": "xampp.png",
+      "alt": "Xampp",
+      "animation": "mirror"
+    },
+    {
       "skillName": "Bootstrap 5",
       "image": "Bootstrap 5 Logo.png",
+      "alt": "Bootstrap",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Tailwind.css",
+      "image": "tailwind.png",
       "alt": "Bootstrap",
       "animation": "mirror"
     },
