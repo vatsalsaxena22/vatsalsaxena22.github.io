@@ -344,6 +344,31 @@ main > div > h2:nth-child(4) {
   color: var(--font-color);
 }
 
+.form-div{
+  padding: 40px;
+  margin: 40px;
+}
+.form-div h4{
+  padding: 20px 0;
+}
+.form-div form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-div form input,
+.form-div form textarea,
+.form-div form button{
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--bg-color);
+  font-size: 20px;
+  color: var(--font-color);
+}
+.form-div form button:hover{
+  background-color: var(--shadow-color);
+}
 .connect .box {
   padding: 40px;
   margin: 40px;
@@ -363,6 +388,10 @@ main > div > h2:nth-child(4) {
 }
 .connect a {
   color: var(--font-color);
+}
+#status-message{
+  padding: 20px 0;
+  color: var(--primary-color);
 }
 
 .footer-inner {

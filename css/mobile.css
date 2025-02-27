@@ -47,6 +47,10 @@
   main h2 {
     font-size: 50px;
   }
+  h2{
+    text-align: center;
+    padding: 10px 0;
+  }
 
   .experience .card{
     padding: 10px;
@@ -90,6 +94,22 @@
   .timeline{
     font-size: 15px;
   }
+
+  .form-div{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .form-div form button{
+    background-color: var(--shadow-color);
+  }
+
+  .connect .box {
+    padding: 20px;
+    margin: 40px 10px 0px 10px;
+  }
+
 
   footer h2{
     font-size: 40px;
