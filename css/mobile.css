@@ -75,7 +75,9 @@
   .skills-item{
     width: 100px;
     height: 100px;
-    font-size: 10px;
+    font-size: 8px;
+    justify-content: end;
+    gap: 0;
   }
   .skills-item img{
     height: 50px;
