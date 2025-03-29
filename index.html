@@ -6,6 +6,7 @@
     <title>Vatsal Saxena | Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
     <link rel="shortcut icon" href="./images/Profile.jpg" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -26,6 +27,14 @@
     <script src="./js/email.js"></script>
   </head>
   <body>
+    <div class="loading-screen" id="loadingScreen">
+      <div class="v-container">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <path class="v-path" d="M50,50 L100,150 L150,50" />
+        </svg>
+      </div>
+    </div>
+
     <header>
       <div class="logo">
         <h2>PORTFOLIO</h2>
@@ -270,5 +279,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/loading.js"></script>
   </body>
 </html>
