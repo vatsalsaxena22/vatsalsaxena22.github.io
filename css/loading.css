@@ -1,54 +1,54 @@
 .loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
 
-  .loading-screen.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
-  .v-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-  }
+.v-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
 
-  /* SVG styles for the V letter path */
-  .v-path {
-    stroke: var(--primary-color);
+/* SVG styles for the V letter path */
+.v-path {
+  stroke: var(--primary-color);
+  stroke-width: 10;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-v 2s ease forwards, pulse 1.5s ease-in-out infinite alternate;
+  animation-delay: 0s, 2s;
+}
+
+@keyframes draw-v {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    stroke-opacity: 1;
     stroke-width: 10;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 300;
-    stroke-dashoffset: 300;
-    animation: draw-v 2s ease forwards, pulse 1.5s ease-in-out infinite alternate;
-    animation-delay: 0s, 2s;
   }
-
-  @keyframes draw-v {
-    to {
-      stroke-dashoffset: 0;
-    }
+  to {
+    stroke-opacity: 0.7;
+    stroke-width: 7;
   }
-
-  @keyframes pulse {
-    from {
-      stroke-opacity: 1;
-      stroke-width: 10;
-    }
-    to {
-      stroke-opacity: 0.7;
-      stroke-width: 7;
-    }
-  }
+}

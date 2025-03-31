@@ -1,11 +1,7 @@
 const skillElement = document.querySelector(".skills .box");
-// const certificateElement = document.querySelector(".certificates");
 
-// Fetch both skills and certificates
-Promise.all([
-  fetch("./data/skills.json").then((response) => response.json()),
-  //   fetch("./data/certificate.json").then((response) => response.json()),
-])
+// Fetch both skills
+Promise.all([fetch("./data/skills.json").then((response) => response.json())])
   .then(([skills, certificates]) => {
     // Generate HTML for skills
     const skillsHTML = skills.skills
@@ -19,25 +15,10 @@ Promise.all([
       )
       .join("");
 
-    // Generate HTML for certificates
-    // const certificatesHTML = certificates.certificates
-    //   .map(
-    //     (element) => `
-    //     <div class="cbox">
-    //       <h2>${element.certificateName}</h2>
-    //       <img src="./images/${element.image}" alt="${element.alt}">
-    //     </div>
-    //   `
-    //   )
-    //   .join("");
-
     // Update the DOM
     skillElement.innerHTML += skillsHTML;
-    // certificateElement.innerHTML = certificatesHTML;
   })
   .catch((error) => console.error("Error fetching data:", error));
-
-// Cursor
 
 const title = document.querySelector(".footer-title");
 const text = "Portfolio";
@@ -46,6 +27,8 @@ let i = 0;
 setInterval(() => {
   title.textContent = text.slice(0, ++i % (text.length + 1));
 }, 200);
+
+// Cursor
 
 var cursor = document.querySelector(".cursor");
 var cursorinner = document.querySelector(".cursor2");
@@ -82,6 +65,3 @@ a.forEach((item) => {
     cursor.classList.remove("hover");
   });
 });
-
-
-// EmailJS

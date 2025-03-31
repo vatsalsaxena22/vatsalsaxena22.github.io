@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Slideshow</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        bottom: unset;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: rgb(236, 28, 28);
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 1s ease;
+        z-index: 1;
+      }
+      .back-btn:hover {
+        background-color: rgb(193, 25, 25);
+      }
+
+      .slideshow-container {
+        /* height: 500px; */
+        position: relative;
+        margin: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: white;
+      }
+
+      .slide {
+        height: 400px;
+        display: none;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .slide.active {
+        display: block;
+        animation: fadeEffect 1s;
+      }
+
+      @keyframes fadeEffect {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .navigation {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .nav-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .nav-btn:hover {
+        background-color: #45a049;
+      }
+
+      .dots-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .active-dot {
+        background-color: #4caf50;
+      }
+
+      @media screen and (max-width: 650px) {
+        .back-btn {
+          top: unset;
+          bottom: 20px;
+        }
+        .slide {
+          height: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./index.html" class="back-btn">Close</a>
+    <div class="slideshow-container"></div>
+    <div class="dots-container"></div>
+    <div class="navigation">
+      <button
+        class="nav-btn"
+        onclick="changeSlide(-1)"
+        tabindex="0"
+        aria-label="Previous slide"
+      >
+        Previous
+      </button>
+      <button
+        class="nav-btn"
+        onclick="changeSlide(1)"
+        tabindex="0"
+        aria-label="Next slide"
+      >
+        Next
+      </button>
+    </div>
+
+    <script>
+      const certificateElement = document.querySelector(".slideshow-container");
+      const dotsContainer = document.querySelector(".dots-container");
+      let slideIndex = 1;
+
+      fetch("./data/certificates.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data.certificates || data.certificates.length === 0) {
+            certificateElement.innerHTML = `<div class="slide active"><h2>No certificates available</h2></div>`;
+            return;
+          }
+
+          certificateElement.innerHTML = data.certificates
+            .map(
+              (cert, index) => `
+                    <div class="slide ${index === 0 ? "active" : ""}">
+                        <img src="./images/certificates/${cert.image}" alt="${
+                cert.alt
+              }" loading="lazy">
+                        <h2>${cert.certificateName}</h2>
+                    </div>
+                `
+            )
+            .join("");
+
+          dotsContainer.innerHTML = data.certificates
+            .map(
+              (_, index) => `
+                    <span class="dot ${
+                      index === 0 ? "active-dot" : ""
+                    }" onclick="currentSlide(${index + 1})"></span>
+                `
+            )
+            .join("");
+
+          showSlide(slideIndex);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          certificateElement.innerHTML = `<div class="slide active"><h2>Error loading certificates</h2><p>Please try again later</p></div>`;
+        });
+
+      function changeSlide(n) {
+        showSlide((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+
+      function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+        const dots = document.getElementsByClassName("dot");
+
+        if (slides.length === 0) return;
+
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+
+        for (let slide of slides) slide.classList.remove("active");
+        for (let dot of dots) dot.classList.remove("active-dot");
+
+        slides[slideIndex - 1]?.classList.add("active");
+        dots[slideIndex - 1]?.classList.add("active-dot");
+      }
+    </script>
+  </body>
+</html>

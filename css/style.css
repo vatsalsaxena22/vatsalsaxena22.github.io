@@ -35,6 +35,7 @@ html {
   left: 0;
   top: 0;
   transform: translate(calc(-50% + 10px), -50%);
+  z-index: 100;
 }
 
 .cursor2 {
@@ -46,6 +47,7 @@ html {
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 100;
 }
 
 .cursorinnerhover {
@@ -158,7 +160,7 @@ main > div > h2:nth-child(4) {
 }
 
 .btns > a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .btns > a:active {
@@ -245,10 +247,10 @@ main > div > h2:nth-child(4) {
   height: 100px;
 }
 
-.other-skills-head{
+.other-skills-head {
   padding: 20px;
 }
-.other-skills{
+.other-skills {
   margin: 50px 0 0 150px;
 }
 
@@ -340,18 +342,28 @@ main > div > h2:nth-child(4) {
 .timeline-item:hover::before {
   animation: pulse 1s infinite;
 }
+
+.show-certificates {
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--bg-color);
+  text-decoration: none;
+  font-size: 15px;
+  text-wrap-mode: nowrap;
+}
 .show-certificates:hover {
-  color: var(--font-color);
+  text-decoration: underline;
 }
 
-.form-div{
+.form-div {
   padding: 40px;
   margin: 40px;
 }
-.form-div h4{
+.form-div h4 {
   padding: 20px 0;
 }
-.form-div form{
+.form-div form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -359,14 +371,14 @@ main > div > h2:nth-child(4) {
 }
 .form-div form input,
 .form-div form textarea,
-.form-div form button{
+.form-div form button {
   padding: 20px;
   border: 2px solid var(--primary-color);
   background-color: var(--bg-color);
   font-size: 20px;
   color: var(--font-color);
 }
-.form-div form button:hover{
+.form-div form button:hover {
   background-color: var(--shadow-color);
 }
 .connect .box {
@@ -389,7 +401,7 @@ main > div > h2:nth-child(4) {
 .connect a {
   color: var(--font-color);
 }
-#status-message{
+#status-message {
   padding: 20px 0;
   color: var(--primary-color);
 }
