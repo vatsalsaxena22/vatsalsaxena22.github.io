@@ -19,6 +19,12 @@
       "animation": "out3d"
     },
     {
+      "skillName": "W3.css / W3.js",
+      "image": "w3.png",
+      "alt": "W3",
+      "animation": "out3d"
+    },
+    {
       "skillName": "Git",
       "image": "git.png",
       "alt": "Git",
@@ -55,24 +61,6 @@
       "animation": "mirror"
     },
     {
-      "skillName": "PHP",
-      "image": "PHP.png",
-      "alt": "PHP",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "MySQL",
-      "image": "mysql.png",
-      "alt": "MySQL",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "Xampp",
-      "image": "xampp.png",
-      "alt": "Xampp",
-      "animation": "mirror"
-    },
-    {
       "skillName": "Bootstrap 5",
       "image": "Bootstrap 5 Logo.png",
       "alt": "Bootstrap",
@@ -92,7 +80,7 @@
     },
     {
       "skillName": "Node.js",
-      "image": "nodejs_logo.png",
+      "image": "Nodejs.svg",
       "alt": "Node.js",
       "animation": "mirror"
     },
@@ -103,7 +91,7 @@
       "animation": "spin"
     },
     {
-      "skillName": "mongoDB",
+      "skillName": "MongoDB",
       "image": "mongo.png",
       "alt": "mongoDB",
       "animation": "mirror"
