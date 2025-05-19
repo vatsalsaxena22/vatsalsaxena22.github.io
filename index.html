@@ -193,9 +193,26 @@
         <h4>Drop your message here!</h4>
         <p id="status-message"></p>
         <form id="contact-form">
-          <input type="text" placeholder="Name" id="formName" required />
-          <input type="email" placeholder="Email" id="formEmail" required />
-          <textarea placeholder="Message" id="message" required></textarea>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            id="formName"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="formEmail"
+            required
+          />
+          <textarea
+            placeholder="Message"
+            name="email"
+            id="message"
+            required
+          ></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
@@ -238,7 +255,6 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>EmailJS</li>
           </ul>
         </div>
 
@@ -283,17 +299,20 @@
         e.preventDefault();
 
         const formData = {
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
+          name: document.getElementById("formName").value.trim(),
+          email: document.getElementById("formEmail").value.trim(),
+          message: document.getElementById("message").value.trim(),
         };
 
         try {
-          const res = await fetch("https://nodemailer-proxy-rouge.vercel.app/api/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-          });
+          const res = await fetch(
+            "https://nodemailer-proxy-rouge.vercel.app/api/send",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData),
+            }
+          );
 
           const data = await res.json();
           if (res.ok) {
