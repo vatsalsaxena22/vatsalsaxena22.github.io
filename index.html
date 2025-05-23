@@ -195,21 +195,21 @@
         <form id="contact-form">
           <input
             type="text"
-            name="name"
+            name="formName"
             placeholder="Name"
             id="formName"
             required
           />
           <input
             type="email"
-            name="email"
+            name="formEmail"
             placeholder="Email"
             id="formEmail"
             required
           />
           <textarea
             placeholder="Message"
-            name="email"
+            name="message"
             id="message"
             required
           ></textarea>
@@ -291,42 +291,42 @@
       >
     </footer>
 
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "4T-nuIusr_WSXK11D",
+        });
+      })();
+    </script>
     <script>
-      const form = document.getElementById("contact-form");
-      const responseMsg = document.getElementById("status-message");
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+          const statusMessage = document.getElementById("status-message");
 
-        const formData = {
-          name: document.getElementById("formName").value.trim(),
-          email: document.getElementById("formEmail").value.trim(),
-          message: document.getElementById("message").value.trim(),
-        };
-
-        try {
-          const res = await fetch(
-            "https://nodemailer-proxy-rouge.vercel.app/api/send",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(formData),
+          emailjs.sendForm("service_uu2xf55", "template_znhg5hj", this).then(
+            function () {
+              statusMessage.style.color = "#4dffb5";
+              statusMessage.textContent = "Message sent successfully!";
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              statusMessage.style.color = "red";
+              statusMessage.textContent =
+                "Failed to send message. Please try again.";
+              console.error("EmailJS Error:", error);
             }
           );
-
-          const data = await res.json();
-          if (res.ok) {
-            responseMsg.textContent = "✅ Email sent successfully!";
-            form.reset();
-          } else {
-            responseMsg.textContent = "❌ Failed to send email. Try again.";
-            console.error(data);
-          }
-        } catch (err) {
-          responseMsg.textContent = "❌ Error: " + err.message;
-        }
-      });
+        });
     </script>
+
     <script src="./js/script.js"></script>
     <script src="./js/loading.js"></script>
   </body>
