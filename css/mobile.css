@@ -52,6 +52,16 @@
     padding: 10px 0;
   }
 
+  .btns{
+    padding: 5px;
+    margin: 5px;
+  }
+  .btns > a{
+    width: 100px;
+    padding: 15px;
+    font-size: 10px;
+  }
+
   .experience .card {
     padding: 10px;
     margin: 20px 10px;
