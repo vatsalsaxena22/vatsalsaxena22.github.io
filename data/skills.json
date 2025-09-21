@@ -37,24 +37,6 @@
       "animation": "mirror"
     },
     {
-      "skillName": "Hostinger",
-      "image": "hostinger.jpeg",
-      "alt": "Hostinger A.I.",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "Goolge Sites",
-      "image": "google-sites.png",
-      "alt": "Google Sites",
-      "animation": "mirror"
-    },
-    {
-      "skillName": "Blogger",
-      "image": "Blogger.png",
-      "alt": "Blogger",
-      "animation": "mirror"
-    },
-    {
       "skillName": "WordPress",
       "image": "wordpress.jpg",
       "alt": "WordPress",
@@ -64,6 +46,18 @@
       "skillName": "Bootstrap 5",
       "image": "Bootstrap 5 Logo.png",
       "alt": "Bootstrap",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "PHP",
+      "image": "PHP.png",
+      "alt": "PHP",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "MySQL",
+      "image": "mysql.png",
+      "alt": "MySQL",
       "animation": "mirror"
     },
     {
