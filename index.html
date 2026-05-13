@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -269,67 +269,115 @@
           <h3>VS Trio</h3>
           <ul>
             <li>
-              <a
-                href="/"
-                >Vatsal Saxena | Portfolio</a
-              >
+              <a href="/">Vatsal Saxena | Portfolio</a>
             </li>
             <li>
-              <a
-                href="https://vsprojects.vercel.app/"
-                target="_blank"
+              <a href="https://vsprojects.vercel.app/" target="_blank"
                 >Vatsal Saxena | Projects</a
               >
             </li>
             <li>
-              <a
-                href="#"
-                >Vatsal Saxena | Works</a
-              >
+              <a href="#">Vatsal Saxena | Works</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <marquee class="foot-note"
-        >This Site is Designed & Developed by Mr. Vatsal Saxena.</marquee
-      >
+      <marquee class="foot-note">
+        This Site is Designed & Developed by Mr. Vatsal Saxena.
+      </marquee>
     </footer>
 
     <!-- EmailJS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "4T-nuIusr_WSXK11D",
-        });
-      })();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+      // Initialize EmailJS
+      emailjs.init({
+        publicKey: "4T-nuIusr_WSXK11D",
+      });
 
-          const statusMessage = document.getElementById("status-message");
+      // Elements
+      const form = document.getElementById("contact-form");
+      const statusMessage = document.getElementById("status-message");
+      const submitBtn = form.querySelector("button[type='submit']");
 
-          emailjs.sendForm("service_uu2xf55", "template_znhg5hj", this).then(
-            function () {
-              statusMessage.style.color = "#4dffb5";
-              statusMessage.textContent = "Message sent successfully!";
-              document.getElementById("contact-form").reset();
-            },
-            function (error) {
-              statusMessage.style.color = "red";
-              statusMessage.textContent =
-                "Failed to send message. Please try again.";
-              console.error("EmailJS Error:", error);
-            }
-          );
-        });
+      // Cooldown protection
+      let isSending = false;
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Prevent multiple clicks
+        if (isSending) return;
+
+        // Form Data
+        const formData = new FormData(form);
+
+        const name = formData.get("formName")?.trim();
+        const email = formData.get("formEmail")?.trim();
+        const message = formData.get("message")?.trim();
+
+        // Basic Validation
+        if (!name || !email || !message) {
+          showStatus("Please fill all fields.", "error");
+          return;
+        }
+
+        // Email Validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+          showStatus("Please enter a valid email.", "error");
+          return;
+        }
+
+        try {
+          isSending = true;
+
+          // Button Loading State
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `
+        <span class="loader"></span>
+        Sending...
+      `;
+
+          showStatus("Sending your message...", "loading");
+
+          // Send Email
+          await emailjs.sendForm("service_uu2xf55", "template_znhg5hj", form);
+
+          // Success
+          showStatus("Message sent successfully!", "success");
+
+          form.reset();
+        } catch (error) {
+          console.error("EmailJS Error:", error);
+
+          showStatus("Failed to send message. Please try again.", "error");
+        } finally {
+          isSending = false;
+
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = "Send Message";
+        }
+      });
+
+      // Status Function
+      function showStatus(message, type) {
+        statusMessage.textContent = message;
+
+        statusMessage.className = "";
+        statusMessage.classList.add(type);
+
+        // Auto hide success message
+        if (type === "success") {
+          setTimeout(() => {
+            statusMessage.textContent = "";
+            statusMessage.className = "";
+          }, 5000);
+        }
+      }
     </script>
 
     <script src="./js/script.js"></script>

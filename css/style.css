@@ -46,7 +46,10 @@ html {
   position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    opacity 0.3s;
   z-index: 100;
 }
 
@@ -194,10 +197,9 @@ main > div > h2:nth-child(4) {
   border-radius: 24px;
 
   /* background: var(--card-bg, #fff); */
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
   transition: all 0.35s ease;
   position: relative;
@@ -207,8 +209,7 @@ main > div > h2:nth-child(4) {
 /* Hover Effect */
 .experience .card:hover {
   transform: translateY(-6px);
-  box-shadow:
-    0 18px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 
   border-color: var(--primary-color);
 }
@@ -225,8 +226,7 @@ main > div > h2:nth-child(4) {
 
   /* background: #fff; */
 
-  box-shadow:
-    0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 
   flex-shrink: 0;
 }
@@ -432,7 +432,8 @@ main > div > h2:nth-child(4) {
   background: var(--bg-color);
   border: 2px solid var(--primary-color);
   border-radius: 50%;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 0 0 var(--shadow-color);
   will-change: transform, box-shadow;
@@ -532,4 +533,48 @@ ul li::marker {
 }
 .foot-note {
   font-size: 20px;
+}
+
+#status-message {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#status-message.success {
+  color: var(--primary-color);
+}
+
+#status-message.error {
+  color: #ef4444;
+}
+
+#status-message.loading {
+  color: #3b82f6;
+}
+
+/* Button Disabled */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Loader */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
