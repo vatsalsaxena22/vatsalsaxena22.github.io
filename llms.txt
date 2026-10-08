@@ -1,0 +1,13 @@
+# Vatsal Saxena
+
+> Full Stack Developer. I build scalable backends (PHP, MySQL, Node.js), fast React and Tailwind interfaces, APIs and admin panels.
+
+## Main pages
+- [Portfolio home](https://vatsalsaxena22.github.io/): overview, experience, skills and contact
+- [Experience](https://vatsalsaxena22.github.io/#experience): roles and tenure
+- [Skills](https://vatsalsaxena22.github.io/#skills): languages, frameworks and tools
+- [Contact](https://vatsalsaxena22.github.io/#contact): get in touch
+
+## Profiles
+- [LinkedIn](https://linkedin.com/in/vatsalsaxena)
+- [GitHub](https://github.com/vatsalsaxena22)

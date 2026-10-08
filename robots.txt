@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# AI Search / Discovery
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# User-triggered ChatGPT requests
+User-agent: ChatGPT-User
+Allow: /
+
+# AI Training Crawlers
+# Allow these only if you are comfortable with your public portfolio
+# being potentially used for model training.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://vatsalsaxena22.github.io/sitemap.xml
