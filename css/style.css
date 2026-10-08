@@ -168,6 +168,12 @@ main {
   overflow: hidden;
 }
 
+@media(max-width: 600px) {
+  .hero {
+    min-height: 80svh;
+  }
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -1024,7 +1030,7 @@ ul li::marker {
   }
   .connect .box {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 2px;
     padding: 20px;
     margin: 40px 10px 0;
@@ -1234,6 +1240,7 @@ ul li::marker {
   box-shadow: 0 0 40px var(--shadow-color);
   overflow: hidden;
   text-align: left;
+  margin-top: 25px;
 }
 .term-bar {
   display: flex;
