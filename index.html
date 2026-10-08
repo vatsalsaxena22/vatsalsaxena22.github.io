@@ -3,384 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vatsal Saxena | Portfolio</title>
+    <title>Vatsal Saxena | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Vatsal Saxena is a full stack developer at Enkidu Technologies. See his experience, skills, education and projects." />
+    <meta name="theme-color" content="#070b14" />
+    <meta property="og:title" content="Vatsal Saxena | Full Stack Developer" />
+    <meta property="og:description" content="Experience, skills and projects of a full stack developer." />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
-    <link rel="stylesheet" href="./css/loading.css" />
     <link rel="shortcut icon" href="./images/Profile.jpg" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <div class="loading-screen" id="loadingScreen">
       <div class="v-container">
-        <svg width="200" height="200" viewBox="0 0 200 200">
+        <svg width="200" height="200" viewBox="0 0 200 200" aria-hidden="true">
           <path class="v-path" d="M50,50 L100,150 L150,50" />
         </svg>
       </div>
     </div>
 
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor2" aria-hidden="true"></div>
+
     <header>
-      <div class="logo">
+      <a class="logo" href="#top" aria-label="Vatsal Saxena, home">
+        <svg width="22" height="22" viewBox="0 0 200 200" aria-hidden="true"><path d="M40,40 L100,160 L160,40" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h2>PORTFOLIO</h2>
-      </div>
+      </a>
+      <div class="scroll-progress" aria-hidden="true"></div>
 
-      <div class="cursor"></div>
-      <div class="cursor2"></div>
-
-      <nav class="nav-desktop">
-        <a href="#"><i class="fa-solid fa-home"></i> Home</a>
-        <a href="#experience"
-          ><i class="fa-solid fa-briefcase"></i> Experience</a
-        >
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#top"><i class="fa-solid fa-home"></i> Home</a>
+        <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
         <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
-        <a href="#education"
-          ><i class="fa-solid fa-graduation-cap"></i> Education</a
-        >
+        <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
         <a href="#connect"><i class="fa-solid fa-phone"></i> Connect</a>
       </nav>
-
-      <nav class="nav-mobile">
-        <a href="#"><i class="fa-solid fa-home"></i></a>
-        <a href="#experience"><i class="fa-solid fa-briefcase"></i></a>
-        <a href="#skills"><i class="fa-solid fa-code"></i></a>
-        <a href="#education"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a href="#connect"><i class="fa-solid fa-phone"></i></a>
-      </nav>
     </header>
+    <nav class="nav-mobile" aria-label="Primary">
+      <a href="#top" aria-label="Home"><i class="fa-solid fa-home"></i></a>
+      <a href="#experience" aria-label="Experience"><i class="fa-solid fa-briefcase"></i></a>
+      <a href="#skills" aria-label="Skills"><i class="fa-solid fa-code"></i></a>
+      <a href="#education" aria-label="Education"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="#connect" aria-label="Connect"><i class="fa-solid fa-phone"></i></a>
+    </nav>
 
-    <main>
+    <main id="main">
       <div class="main-title">
         <h2>This is</h2>
         <h1>Vatsal Saxena</h1>
         <h2>A Full Stack</h2>
         <h2>Developer</h2>
       </div>
+
       <div class="btns">
         <a href="./Vatsal_Saxena_Resume.pdf" download="">Download CV</a>
         <a href="#connect">Contact Me</a>
-        <a href="https://vsprojects.vercel.app/" target="_blank">Projects</a>
-        <a href="#" title="coming soon">Works</a>
+        <a href="https://vsprojects.vercel.app/" target="_blank" rel="noopener">Projects</a>
+        <a href="#" title="coming soon" aria-disabled="true">Works</a>
+      </div>
+
+      <div class="terminal" role="img" aria-label="Terminal showing: Vatsal Saxena, Full Stack Developer at Enkidu Technologies">
+        <div class="term-bar"><i></i><i></i><i></i><span>~/vatsal</span></div>
+<pre id="termBody">$ whoami
+Vatsal Saxena, Full Stack Developer</pre>
       </div>
     </main>
 
-    <div id="experience" class="spacer"></div>
-    <div class="experience container">
-      <h2>Experience</h2>
+    <section id="experience">
+      <div class="spacer"></div>
+      <div class="experience container">
+        <h2>Experience</h2>
 
-      <div class="card">
-        <img src="./images/companies_logos/ENKIDU.png" alt="" />
-        <div>
-          <p>Full stack Developer at</p>
-          <a href="https://www.enkidu.in/" target="_blank"
-            >Enkidu Technologies Pvt. Ltd.</a
-          ><sup>Current</sup>
-          <p>July 2024 - Till now</p>
+        <div class="card">
+          <img src="./images/companies_logos/ENKIDU.png" alt="Enkidu Technologies logo" />
+          <div>
+            <p>Full stack Developer at</p>
+            <a href="https://www.enkidu.in/" target="_blank" rel="noopener">Enkidu Technologies Pvt. Ltd.</a><sup>Current</sup>
+            <p>July 2024 - Till now <span class="tenure" data-start="2024-07"></span></p>
+            <!-- Add 2-3 outcomes here, e.g. <ul class="highlights"><li>Built X, which did Y</li></ul> -->
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./images/companies_logos/can.png" alt="Can Technologies logo" />
+          <div>
+            <p>MERN Stack Developer Intern at</p>
+            <a href="https://www.cantechnologies.co.in/" target="_blank" rel="noopener">Can Technologies Pvt. Ltd.</a>
+            <p>January 2024 - July 2024 <span class="tenure" data-start="2024-01" data-end="2024-07"></span></p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="./images/companies_logos/can.png" alt="" />
-        <div>
-          <p>MERN Stack Developer Intern at</p>
-          <a href="https://www.cantechnologies.co.in/" target="_blank"
-            >Can Technologies Pvt. Ltd.</a
-          >
-          <p>January 2024 - July 2024</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="skills" class="spacer"></div>
-
-    <div class="skills container">
-      <h2>Skills & Tools</h2>
-
-      <div class="box"></div>
-      <h4 class="other-skills-head">Other Technical Skills</h4>
-      <div class="other-skills">
-        <ul>
-          <li>Microsoft Windows</li>
-          <li>Microsoft Office</li>
-          <li>Deployment</li>
-          <li>Hosting</li>
-          <li>Domain Management</li>
-          <li>Command Line Interface</li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="education" class="spacer"></div>
-
-    <div class="education container">
-      <h2>Education</h2>
-
-      <!-- HTML -->
-      <div class="education-inner" aria-label="Education timeline">
-        <div class="timeline">
+    <section id="skills">
+      <div class="spacer"></div>
+      <div class="skills container">
+        <h2>Skills & Tools</h2>
+        <div class="box"></div>
+        <h4 class="other-skills-head">Other Technical Skills</h4>
+        <div class="other-skills">
           <ul>
-            <li class="timeline-item">
-              <time class="timeline-date" datetime="2024">2024</time>
-              <div class="timeline-title">
-                HTML, CSS & JavaScript Certificates
-                <a
-                  class="show-certificates"
-                  href="./certificates.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Show certificates for HTML, CSS and JavaScript"
-                >
-                  Show Certificates
-                  <i
-                    class="fa-solid fa-arrow-up-right-from-square"
-                    title="Show Certificates"
-                  ></i>
-                </a>
-              </div>
-              <div class="timeline-content">
-                Programming Hub, Lets Upgrade and Sololearn
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <time class="timeline-date" datetime="2023">2023</time>
-              <div class="timeline-title">Graduation</div>
-              <div class="timeline-content">
-                Bachelor of Science from Bundelkhand University
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <time class="timeline-date" datetime="2020">2020</time>
-              <div class="timeline-title">CCC Certificate</div>
-              <div class="timeline-content">
-                NIELIT's Course on Computer Concepts
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <time class="timeline-date" datetime="2019">2019</time>
-              <div class="timeline-title">Intermediate</div>
-              <div class="timeline-content">
-                Central Board of Secondary Education
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <time class="timeline-date" datetime="2017">2017</time>
-              <div class="timeline-title">High School</div>
-              <div class="timeline-content">
-                Central Board of Secondary Education
-              </div>
-            </li>
+            <li>Microsoft Windows</li>
+            <li>Microsoft Office</li>
+            <li>Deployment</li>
+            <li>Hosting</li>
+            <li>Domain Management</li>
+            <li>Command Line Interface</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="connect" class="spacer"></div>
+    <section id="education">
+      <div class="spacer"></div>
+      <div class="education container">
+        <h2>Education</h2>
+        <div class="education-inner" aria-label="Education timeline">
+          <div class="timeline">
+            <ul>
+              <li class="timeline-item"><time class="timeline-date" datetime="2023">2023</time><div class="timeline-title">Graduation</div><div class="timeline-content">Bachelor of Science from Bundelkhand University</div></li>
+              <li class="timeline-item"><time class="timeline-date" datetime="2020">2020</time><div class="timeline-title">CCC Certificate</div><div class="timeline-content">NIELIT's Course on Computer Concepts</div></li>
+              <li class="timeline-item"><time class="timeline-date" datetime="2019">2019</time><div class="timeline-title">Intermediate</div><div class="timeline-content">Central Board of Secondary Education</div></li>
+              <li class="timeline-item"><time class="timeline-date" datetime="2017">2017</time><div class="timeline-title">High School</div><div class="timeline-content">Central Board of Secondary Education</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="connect container">
-      <h2>Connect</h2>
-      <div class="form-div">
-        <h4>Drop your message here!</h4>
-        <p id="status-message"></p>
-        <form id="contact-form">
-          <input
-            type="text"
-            name="formName"
-            placeholder="Name"
-            id="formName"
-            required
-          />
-          <input
-            type="email"
-            name="formEmail"
-            placeholder="Email"
-            id="formEmail"
-            required
-          />
-          <textarea
-            placeholder="Message"
-            name="message"
-            id="message"
-            required
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
+    <section id="connect">
+      <div class="spacer"></div>
+      <div class="connect container">
+        <h2>Connect</h2>
+        <div class="form-div">
+          <h4>Drop your message here!</h4>
+          <p id="status-message" role="status" aria-live="polite"></p>
+          <form id="contact-form" novalidate>
+            <div class="field"><label for="formName">Name</label><input type="text" name="formName" id="formName" placeholder="Your name" autocomplete="name" required /></div>
+            <div class="field"><label for="formEmail">Email</label><input type="email" name="formEmail" id="formEmail" placeholder="you@example.com" autocomplete="email" required /></div>
+            <div class="field"><label for="message">Message</label><textarea name="message" id="message" placeholder="What would you like to build or discuss?" required></textarea></div>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+
+        <div class="box">
+          <a href="mailto:vatsalsaxena22@gmail.com" title="vatsalsaxena22@gmail.com" aria-label="Email"><i class="fa-brands fa-google"></i></a>
+          <a href="https://linkedin.com/in/vatsalsaxena/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/vatsalsaxena22/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/9956304705/" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/vatsalya.saxena.3/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/vatsal.saxena/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
       </div>
-      <div class="box">
-        <a
-          href="mailto:vatsalsaxena22@gmail.com"
-          target="_blank"
-          title="vatsalsaxena22@gmail.com"
-          ><i class="fa-brands fa-google"></i
-        ></a>
-        <a href="https://linkedin.com/in/vatsalsaxena/" target="_blank"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/vatsalsaxena22/" target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://wa.me/9956304705/" target="_blank"
-          ><i class="fa-brands fa-whatsapp"></i
-        ></a>
-        <a href="https://www.facebook.com/vatsalya.saxena.3/" target="_blank"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/vatsal.saxena/" target="_blank"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-    </div>
+    </section>
 
     <div class="spacer"></div>
-    <footer class="container">
-      <h2>
-        Vatsal Saxena /
-        <span class="footer-title">Portfolio</span>
-      </h2>
 
+    <footer class="container site-footer">
+      <div class="footer-heading">
+        <div>
+          <p class="footer-eyebrow">LET'S BUILD SOMETHING</p>
+          <h2>Vatsal Saxena <span class="footer-title">/ Portfolio</span></h2>
+        </div>
+      </div>
+      <p class="footer-summary">A little corner of the internet for my work, tools, and the people who make it possible.</p>
       <div class="footer-inner">
-        <div>
-          <h3>Tech Stack</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Resources Used</h3>
-          <ul>
-            <li>Font Awesome</li>
-            <li>EmailJS</li>
-            <li>Github Pages</li>
-          </ul>
-        </div>
-
-        <div>
+        <div class="footer-column"><h3>Tech stack</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
+        <div class="footer-column"><h3>Made possible with</h3><ul><li>Font Awesome</li><li>EmailJS</li><li>Geist (Google Fonts)</li><li>GitHub Pages</li></ul></div>
+        <div class="footer-column">
           <h3>VS Trio</h3>
           <ul>
-            <li>
-              <a href="/">Vatsal Saxena | Portfolio</a>
-            </li>
-            <li>
-              <a href="https://vsprojects.vercel.app/" target="_blank"
-                >Vatsal Saxena | Projects</a
-              >
-            </li>
-            <li>
-              <a href="#">Vatsal Saxena | Works</a>
-            </li>
+            <li><a href="./">Vatsal Saxena | Portfolio</a></li>
+            <li><a href="https://vsprojects.vercel.app/" target="_blank" rel="noopener">Vatsal Saxena | Projects</a></li>
+            <li><a href="#">Vatsal Saxena | Works</a></li>
           </ul>
         </div>
       </div>
-
-      <marquee class="foot-note">
-        This Site is Designed & Developed by Mr. Vatsal Saxena.
-      </marquee>
+      <div class="footer-bottom">
+        <p class="foot-note">Designed &amp; developed by Vatsal Saxena.</p>
+        <a class="to-top" href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
     </footer>
 
-    <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script>
-      // Initialize EmailJS
-      emailjs.init({
-        publicKey: "4T-nuIusr_WSXK11D",
-      });
-
-      // Elements
-      const form = document.getElementById("contact-form");
-      const statusMessage = document.getElementById("status-message");
-      const submitBtn = form.querySelector("button[type='submit']");
-
-      // Cooldown protection
-      let isSending = false;
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        // Prevent multiple clicks
-        if (isSending) return;
-
-        // Form Data
-        const formData = new FormData(form);
-
-        const name = formData.get("formName")?.trim();
-        const email = formData.get("formEmail")?.trim();
-        const message = formData.get("message")?.trim();
-
-        // Basic Validation
-        if (!name || !email || !message) {
-          showStatus("Please fill all fields.", "error");
-          return;
-        }
-
-        // Email Validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailRegex.test(email)) {
-          showStatus("Please enter a valid email.", "error");
-          return;
-        }
-
-        try {
-          isSending = true;
-
-          // Button Loading State
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = `
-        <span class="loader"></span>
-        Sending...
-      `;
-
-          showStatus("Sending your message...", "loading");
-
-          // Send Email
-          await emailjs.sendForm("service_uu2xf55", "template_znhg5hj", form);
-
-          // Success
-          showStatus("Message sent successfully!", "success");
-
-          form.reset();
-        } catch (error) {
-          console.error("EmailJS Error:", error);
-
-          showStatus("Failed to send message. Please try again.", "error");
-        } finally {
-          isSending = false;
-
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = "Send Message";
-        }
-      });
-
-      // Status Function
-      function showStatus(message, type) {
-        statusMessage.textContent = message;
-
-        statusMessage.className = "";
-        statusMessage.classList.add(type);
-
-        // Auto hide success message
-        if (type === "success") {
-          setTimeout(() => {
-            statusMessage.textContent = "";
-            statusMessage.className = "";
-          }, 5000);
-        }
-      }
-    </script>
-
     <script src="./js/script.js"></script>
-    <script src="./js/loading.js"></script>
   </body>
 </html>
