@@ -19,12 +19,6 @@
       "animation": "out3d"
     },
     {
-      "skillName": "W3.css / W3.js",
-      "image": "w3.png",
-      "alt": "W3",
-      "animation": "out3d"
-    },
-    {
       "skillName": "Git",
       "image": "git.png",
       "alt": "Git",
@@ -37,15 +31,21 @@
       "animation": "mirror"
     },
     {
+      "skillName": "Bootstrap 5",
+      "image": "Bootstrap 5 Logo.png",
+      "alt": "Bootstrap",
+      "animation": "mirror"
+    },
+    {
       "skillName": "WordPress",
-      "image": "wordpress.jpg",
+      "image": "wordpress.png",
       "alt": "WordPress",
       "animation": "mirror"
     },
     {
-      "skillName": "Bootstrap 5",
-      "image": "Bootstrap 5 Logo.png",
-      "alt": "Bootstrap",
+      "skillName": "Xampp",
+      "image": "xampp.png",
+      "alt": "Xampp",
       "animation": "mirror"
     },
     {
@@ -67,16 +67,22 @@
       "animation": "mirror"
     },
     {
+      "skillName": "Node.js",
+      "image": "Nodejs.svg",
+      "alt": "Node.js",
+      "animation": "mirror"
+    },
+    {
       "skillName": "React.js",
       "image": "react_logo.png",
       "alt": "React.js",
       "animation": "spin"
     },
     {
-      "skillName": "Node.js",
-      "image": "Nodejs.svg",
-      "alt": "Node.js",
-      "animation": "mirror"
+      "skillName": "Redux",
+      "image": "redux.png",
+      "alt": "Redux",
+      "animation": "spin"
     },
     {
       "skillName": "Express.js",
@@ -87,7 +93,31 @@
     {
       "skillName": "MongoDB",
       "image": "mongo.png",
-      "alt": "mongoDB",
+      "alt": "MongoDB",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Vite",
+      "image": "vite.svg",
+      "alt": "Vite",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Next.js",
+      "image": "nextjs.jpg",
+      "alt": "Next.js",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Electron.js",
+      "image": "electron.png",
+      "alt": "Electron.js",
+      "animation": "mirror"
+    },
+    {
+      "skillName": "Docker",
+      "image": "docker.png",
+      "alt": "Docker",
       "animation": "mirror"
     }
   ]

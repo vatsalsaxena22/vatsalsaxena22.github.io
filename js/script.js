@@ -221,3 +221,34 @@ form.addEventListener("submit", async (e) => {
     btn.textContent = label;
   }
 });
+
+(() => {
+  const el = document.getElementById("typed");
+  if (!el) return;
+
+  const phrases = [
+    "scalable backends.",
+    "fast, responsive UIs.",
+    "admin panels & dashboards.",
+    "APIs that just work.",
+  ];
+
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    el.textContent = phrases[0];
+    return;
+  }
+
+  let p = 0, i = 0, deleting = false;
+
+  const tick = () => {
+    const word = phrases[p];
+    el.textContent = word.slice(0, i);
+
+    if (!deleting && i === word.length) { deleting = true; return setTimeout(tick, 1600); }
+    if (deleting && i === 0) { deleting = false; p = (p + 1) % phrases.length; }
+
+    i += deleting ? -1 : 1;
+    setTimeout(tick, deleting ? 35 : 70);
+  };
+  tick();
+})();

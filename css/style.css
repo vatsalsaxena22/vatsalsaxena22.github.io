@@ -106,9 +106,16 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.logo-monogram {
+  font-family: sans-serif; /* Use your preferred bold display font */
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
 }
 .logo h2 {
   color: var(--font-color);
@@ -151,40 +158,184 @@ main {
   align-items: center;
   padding-bottom: 60px;
 }
-.main-title {
-  background: radial-gradient(
-    circle closest-side,
-    var(--shadow-color),
-    var(--bg-color),
-    var(--bg-color)
-  );
-  padding: 20px;
-  margin: 20px;
+.hero {
+  position: relative;
+  width: 90%;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  overflow: hidden;
 }
-main h1 {
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* major lines */
+    linear-gradient(rgba(59, 130, 246, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.28) 1px, transparent 1px),
+    /* minor lines */
+    linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
+          mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, #000 35%, transparent 100%);
+  pointer-events: none;
+}
+
+.main-title {
+  position: relative;
+  max-width: 980px;
+  width: 100%;
+  text-align: center;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .4rem .9rem;
+  font-size: .85rem;
+  color: var(--font-color);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(8px);
+}
+.pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52,211,153,.7);
+  animation: ping 2s infinite;
+}
+@keyframes ping {
+  70%  { box-shadow: 0 0 0 10px rgba(52,211,153,0); }
+  100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+}
+
+.hero-eyebrow {
+  margin-top: 1.6rem;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--font-color);
+  opacity: .7;
+}
+
+.main-title h1 {
   font-size: clamp(3.2rem, 11vw, 7.5rem);
   color: var(--primary-color);
-  text-align: center;
   letter-spacing: -0.045em;
   font-weight: 800;
   line-height: 1;
+  margin: .2rem 0 .6rem;
 }
-main h2 {
-  font-size: clamp(2rem, 7vw, 5rem);
-  color: var(--font-color);
-  letter-spacing: -0.035em;
+
+.main-title h2.hero-role {
+  font-size: clamp(1.4rem, 4.2vw, 2.6rem);
   font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--font-color);
   line-height: 1.1;
 }
-main > div > h2:nth-child(1) {
-  text-align: left;
+
+.hero-typed {
+  margin-top: 1rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: clamp(.95rem, 2.4vw, 1.25rem);
+  color: var(--primary-color);
+  min-height: 1.6em;
 }
-main > div > h2:nth-child(3) {
-  text-align: right;
+.caret {
+  display: inline-block;
+  width: 2px; height: 1.1em;
+  margin-left: 3px;
+  vertical-align: -.15em;
+  background: var(--primary-color);
+  animation: blink 1s steps(1) infinite;
 }
-main > div > h2:nth-child(4) {
-  text-align: right;
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero-sub {
+  max-width: 560px;
+  margin: 1.25rem auto 0;
+  font-size: clamp(.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--font-color);
+  opacity: .75;
 }
+
+.hero-cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-stack {
+  list-style: none;
+  margin: 2.2rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-stack li {
+  padding: .35rem .8rem;
+  font-size: .8rem;
+  color: var(--font-color);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  background: rgba(255,255,255,.03);
+  transition: transform .25s, border-color .25s, color .25s;
+}
+.hero-stack li:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 1.5rem; left: 50%;
+  translate: -50% 0;
+  width: 24px; height: 40px;
+  border: 2px solid rgba(255,255,255,.25);
+  border-radius: 14px;
+}
+.scroll-hint span {
+  position: absolute;
+  top: 7px; left: 50%;
+  width: 4px; height: 8px;
+  margin-left: -2px;
+  border-radius: 2px;
+  background: var(--primary-color);
+  animation: scroll 1.8s ease-in-out infinite;
+}
+@keyframes scroll {
+  0%   { opacity: 0; transform: translateY(0); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(14px); }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-title > *, .grad, .pulse, .caret, .scroll-hint span { animation: none; opacity: 1; transform: none; }
+}
+
 .btns {
   padding: 20px;
   margin: 20px;
@@ -347,11 +498,100 @@ main > div > h2:nth-child(4) {
   height: 100px;
   object-fit: contain;
 }
+/* ---------- Other Technical Skills ---------- */
 .other-skills-head {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 48px 0 20px;
+  padding: 0;
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-hover);
 }
+/* small jewel, echoing the section titles */
+.other-skills-head::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #93c5fd, #2563eb);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px 2px var(--shadow-color);
+}
+/* fading rule to the edge */
+.other-skills-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-color), transparent);
+}
+
 .other-skills {
-  margin: 50px 0 0 150px;
+  margin: 0;
+}
+.other-skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: auto;
+  font-size: 1rem;
+}
+.other-skills li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--font-color);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+/* glowing status dot replaces the square bullet */
+.other-skills li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+  transition: transform 0.25s ease;
+}
+.other-skills li:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+  background: var(--surface-hover);
+  box-shadow: 0 0 18px var(--shadow-color);
+}
+.other-skills li:hover::before {
+  transform: scale(1.4);
+}
+
+@media (max-width: 600px) {
+  .other-skills-head {
+    margin: 32px 0 16px;
+    font-size: 0.75rem;
+  }
+  .other-skills ul {
+    gap: 8px;
+  }
+  .other-skills li {
+    padding: 8px 12px;
+    font-size: 13px;
+    gap: 8px;
+  }
 }
 
 .timeline {
@@ -893,21 +1133,59 @@ ul li::marker {
   font-size: 18px;
   padding: 56px 24px;
 }
-.container h2 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  letter-spacing: -0.03em;
-  margin-bottom: 28px;
+.container:not(footer) > h2 {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+  margin-bottom: 40px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  color: var(--font-color); /* fallback */
+  background: linear-gradient(
+    100deg,
+    #f8fafc 0%,
+    #f8fafc 30%,
+    #93c5fd 65%,
+    #3b82f6 100%
+  );
+  background-size: 10em 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 24px rgba(59, 130, 246, 0.35));
 }
-.container h2::before {
+
+/* Your square marker, now a glowing jewel */
+.container:not(footer) > h2::before {
   content: "";
-  width: 12px;
-  height: 12px;
-  background: var(--primary-color);
   flex-shrink: 0;
-} /* echoes your square list markers */
+  width: 0.32em;
+  height: 0.32em;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #93c5fd, #2563eb);
+  transform: rotate(45deg);
+  box-shadow:
+    0 0 0 6px rgba(59, 130, 246, 0.14),
+    0 0 22px 4px var(--shadow-color);
+}
+
+/* Fading rule that runs to the edge of the section */
+.container:not(footer) > h2::after {
+  content: "";
+  flex: 1;
+  min-width: 40px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    rgba(59, 130, 246, 0.25) 45%,
+    transparent
+  );
+}
+
 .spacer {
   border-image: linear-gradient(90deg, var(--primary-color), transparent) 1;
 }
@@ -923,15 +1201,14 @@ ul li::marker {
 .ready .terminal {
   animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
-.ready .main-title > :nth-child(2) {
-  animation-delay: 0.1s;
-}
-.ready .main-title > :nth-child(3) {
-  animation-delay: 0.2s;
-}
-.ready .main-title > :nth-child(4) {
-  animation-delay: 0.3s;
-}
+.ready .main-title > :nth-child(1) { animation-delay: 0.05s; }
+.ready .main-title > :nth-child(2) { animation-delay: 0.15s; }
+.ready .main-title > :nth-child(3) { animation-delay: 0.25s; }
+.ready .main-title > :nth-child(4) { animation-delay: 0.35s; }
+.ready .main-title > :nth-child(5) { animation-delay: 0.45s; }
+.ready .main-title > :nth-child(6) { animation-delay: 0.55s; }
+.ready .main-title > :nth-child(7) { animation-delay: 0.65s; }
+.ready .main-title > :nth-child(8) { animation-delay: 0.75s; }
 .ready .btns {
   animation-delay: 0.45s;
 }
@@ -1063,13 +1340,7 @@ ul li::marker {
 .skills-item h2::before {
   display: none;
 }
-.other-skills {
-  margin: 16px 0 0 24px;
-}
-.other-skills-head {
-  padding: 20px 0 0;
-  font-size: 1.2rem;
-}
+
 
 /* Form */
 .form-div {
@@ -1083,6 +1354,7 @@ ul li::marker {
 .field {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 .field label {
